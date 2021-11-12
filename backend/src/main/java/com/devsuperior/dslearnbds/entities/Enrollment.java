@@ -11,7 +11,7 @@ import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
 
 @Entity
 @Table(name = "tb_enrollment")
-public class Enrollement {
+public class Enrollment {
 
 	@EmbeddedId
 	private EnrollmentPK id = new EnrollmentPK();
@@ -24,10 +24,10 @@ public class Enrollement {
 	private boolean available;
 	private boolean onlyUpdate;
 	
-	public Enrollement() {
+	public Enrollment() {
 	}
 
-	public Enrollement(User user, Offer offer, Instant enrollMoment, Instant refundMoment, boolean available,
+	public Enrollment(User user, Offer offer, Instant enrollMoment, Instant refundMoment, boolean available,
 			boolean onlyUpdate) {
 		super();
 		id.setOffer(offer);
